@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1770507426 source:c:\users\usuario\downloads\ejercicios c++ mn\tema1_aritmeticasprecisionfinita\p13_cerospolinomiogrado2_hacer_alumno\mn_aritmeticas.c
+	"mn_aritmeticas.h"
+	<iostream>
+
+1770507426 c:\users\usuario\downloads\ejercicios c++ mn\tema1_aritmeticasprecisionfinita\p13_cerospolinomiogrado2_hacer_alumno\mn_aritmeticas.h
+	<iostream>
+
+1770507426 source:c:\users\usuario\downloads\ejercicios c++ mn\tema1_aritmeticasprecisionfinita\p13_cerospolinomiogrado2_hacer_alumno\cerospolinomiogrado2\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<iostream>
+	"../mn_ceros_pol_grado_2.h"
+
+1770507426 c:\users\usuario\downloads\ejercicios c++ mn\tema1_aritmeticasprecisionfinita\p13_cerospolinomiogrado2_hacer_alumno\mn_ceros_pol_grado_2.h
+	"mn_aritmeticas.h"
+
