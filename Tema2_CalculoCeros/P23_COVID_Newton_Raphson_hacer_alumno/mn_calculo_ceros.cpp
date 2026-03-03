@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-using namespace std;
+// using namespace std; portatil update
 
 /// PARAMETROS DE LA DISTRIBUCION GAMMA
 real alfa,beta,d;
@@ -32,7 +32,8 @@ void calculo_parametros_Gamma(real media, real varianza){
   for(real x=0;x<100;x+=h) suma+=h*pow(x,alfa-1.)*exp(-beta*x);
   d=1./suma;
 
-  cout << "\nalfa = " << alfa << " beta = " << beta << " d = " << d << "\n";
+  // portatil update con std::
+  std::cout << "\nalfa = " << alfa << " beta = " << beta << " d = " << d << "\n";
 
 }
 
@@ -46,7 +47,53 @@ int NiterMax, /// número de iteraciones máximo
 real TOL) /// tolerancia para parar el algoritmo
 {
   /// HACER ALUMNO
+    // Se parte de una función f(x) y de una aproximación inicial x0
+    // de la raíz. AKA no tenemos que hacer ningún validity check.
 
+    // Se inicia un procedimiento iterativo para ir actualizando x0
+    // utilizando el nuevo valor x1 dado por la ecuación (2.8).
+
+    // Las iteraciones paran si la función vale 0 en x0, si la derivada
+    // de la función vale 0 en x0, si la distancia entre x1 y x0 es
+    // pequeña módulo una tolerancia T OL o cuando se excede el
+    // número de iteraciones máximo.
+    real x1;
+    real derivada;
+    real fx0;
+    for (int Niter = 0; Niter <= NiterMax; Niter++){
+        // Esto es para ahorrar calculos, dicho por el profesor.
+        derivada = mn_derivada1(f, x0);
+        fx0 = f(x0);
+
+        if (fx0 == 0) {
+            // encontramos la raíz
+            return Niter;
+        }
+
+        if (derivada == 0) {
+            // encontramos un valle y nos atascamos en este algoritmo.
+            return -1;
+        }
+
+        // la función 2.8 dicha.
+        // además si retornamos en el siguiente if
+        // ya le pasamos la mejor aproximación (x1).
+        x1 = x0 - fx0/derivada;
+
+        // si llegamos a la tolerancia adecuada retornamos.
+        if (mn_distancia(x0, x1) < TOL) {
+            return Niter;
+        }
+
+        // nos quedamos con el nuevo valor
+        x0 = x1;
+    }
+
+    // nos pasamos de las iteraciones
+    return -1;
+    // validación es que los gamma de las 2 primeras lineas son 0.01 como el estudio,
+    // que los valores son coherentes con la gráfica, el número de iteraciones es
+    // normal y Gammap tiende a 0.
 }
 
 
