@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> 
+<svg width="12cm" height="12cm" viewBox="0 0 1024 1024"
+xmlns="http://www.w3.org/2000/svg" version="1.1"> 
+<line x1="100.000000" y1="100.000000" x2="300.000000" y2="500.000000" style="stroke:rgb(0,0,0);stroke-width:3" />  
+<line x1="300.000000" y1="500.000000" x2="700.000000" y2="600.000000" style="stroke:rgb(0,0,0);stroke-width:3" />  
+<line x1="700.000000" y1="600.000000" x2="924.000000" y2="924.000000" style="stroke:rgb(0,0,0);stroke-width:3" />  
+<circle cx="100.000000" cy="100.000000" r="7" stroke="none" fill="black" />  
+<circle cx="300.000000" cy="500.000000" r="7" stroke="none" fill="black" />  
+<circle cx="700.000000" cy="600.000000" r="7" stroke="none" fill="black" />  
+<circle cx="924.000000" cy="924.000000" r="7" stroke="none" fill="black" />  
+</svg>
