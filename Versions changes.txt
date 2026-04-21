@@ -1,0 +1,3 @@
+- They changed mid course the exercise and book
+For the most part everything is the same, main diferences are better explanations for splines and more content for the T4 foward, specially on adding study cases.
+Previous work should for the most hand be almost 1-1, but since the change would require time to check if the book and study cases are the same (or if the teachers aproached changed) I separated it into 2 versions.
